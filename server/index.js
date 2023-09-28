@@ -10,3 +10,13 @@ const server = app.listen(port, () => {
 });
 
 Gun({ web: server });
+
+module.exports = async (event, context) => {
+  // Your server logic goes here
+  // You can access event and context objects if needed
+
+  return {
+    statusCode: 200,
+    body: JSON.stringify({ message: "Server is running." }),
+  };
+};
