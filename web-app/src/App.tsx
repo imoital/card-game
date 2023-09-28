@@ -65,6 +65,8 @@ const App = () => {
       <GlobalStyle />
       <StyledLayout hasSider>
         <StyledUserID type="secondary">
+          {state.roomName && `ROOM: ${state.roomName}`}
+          <br />
           YOUR ID: {state.playerName}
         </StyledUserID>
         {state.roomName ? <Game /> : <InitialScreen />}
