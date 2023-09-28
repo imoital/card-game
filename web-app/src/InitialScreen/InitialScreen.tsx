@@ -39,16 +39,17 @@ const InitialScreen = () => {
         if (data === undefined) {
           setErrorMessage("Room Doesn't Exist");
         } else {
+          console.log(data.userCount);
           if (data.userCount < 2) {
             gun
               .get(roomName)
               .get("userCount")
               .put(data.userCount + 1);
+            dispatch(setRoom(roomName));
+            setRoomName("");
           } else {
             setErrorMessage("Room Is Full");
           }
-          dispatch(setRoom(roomName));
-          setRoomName("");
           resolve();
         }
         setIsLoading(false);
