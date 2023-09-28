@@ -1,3 +1,5 @@
 /web-app/node_modules/
 /server/node_modules/
 /server/radata
+# Local Netlify folder
+.netlify
