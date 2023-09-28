@@ -2,10 +2,6 @@
 
 Card game using [Gun.js](https://gun.eco/) for p2p communication. The Game includes a chat. Each room allow a maximum of two users.
 
-## Demo
-
-(url to demo)
-
 ## Run project
 
 1. Clone the repository
